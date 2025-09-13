@@ -1,0 +1,5 @@
+2025/06/06-19:33:47.023 6b2f Creating DB /home/h/.config/Slack/Local Storage/leveldb since it was missing.
+2025/06/06-19:33:47.038 6b2f Reusing MANIFEST /home/h/.config/Slack/Local Storage/leveldb/MANIFEST-000001
+2025/06/06-21:08:47.513 6b30 Level-0 table #5: started
+2025/06/06-21:08:47.518 6b30 Level-0 table #5: 17596 bytes OK
+2025/06/06-21:08:47.525 6b30 Delete type=0 #3

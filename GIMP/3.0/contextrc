@@ -1,0 +1,18 @@
+# GIMP user context
+
+(tool "gimp-by-color-select-tool")
+(paint-info "gimp-paintbrush")
+(foreground
+    (color "R'G'B'A double" 32 "\0\0\0\0\0\0\360\77\0\0\0\300\177\176\356\77\0\0\0\140\76\73\353\77\0\0\0\0\0\0\360\77" 0))
+(background
+    (color "R'G'B'A u8" 4 "\136Y\176\377" 0))
+(brush "2. Hardness 050")
+(dynamics "Pressure Size")
+(mybrush "100% Opaque")
+(pattern "Pine")
+(gradient "FG to BG (RGB)")
+(palette "Color History")
+(font "Sans-serif")
+(tool-preset "Virtual core pointer")
+
+# end of user context
