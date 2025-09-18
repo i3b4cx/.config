@@ -28,7 +28,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l dim
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3-msg exit
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -61,7 +61,9 @@ bindsym $mod+d exec --no-startup-id dmenu_run \
   -sb '#7fbbb3' \
   -sf '#2d353b' \
   -fn 'MonoLisa i3b4cx:style=Bold Italic:size=9' \
-  -l 20 -c
+  -l 20 -c \
+  -bw 1 \
+  -bc "#fdf6e3"
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -193,21 +195,12 @@ gaps inner 30
 gaps left 40
 gaps right 40
 
-#client.focused #5e597e #5e597e #5e597e #5e597e
-#client.unfocused #5e597e #5e597e #5e597e #5e597e
-#client.focused_inactive #5e597e #5e597e #5e597e #5e597e
-#client.urgent #5e597e #5e597e #5e597e #5e597e
+client.focused #fdf6e3 #fdf6e3 #fdf6e3 #fdf6e3
+client.unfocused #fdf6e3 #fdf6e3 #fdf6e3 #fdf6e3
+client.focused_inactive #fdf6e3 #fdf6e3 #fdf6e3 #fdf6e3
+client.urgent #fdf6e3 #fdf6e3 #fdf6e3 #fdf6e3
 
-client.focused #faf4ed #faf4ed #faf4ed #faf4ed
-client.unfocused #faf4ed #faf4ed #faf4ed #faf4ed
-client.focused_inactive #faf4ed #faf4ed #faf4ed #faf4ed
-client.urgent #faf4ed #faf4ed #faf4ed #faf4ed
-
-for_window [class="^.*"] border pixel 0
-
-bindsym $mod+shift+x exec betterlockscreen -l dim
-bindsym $mod+shift+p exec prompt "Shutdown?" "sudo shutdown -h now"
-bindsym $mod+shift+o exec prompt "Exit i3?" "i3-msg exit"
+for_window [class="^.*"] border pixel 1
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -215,6 +208,7 @@ bindsym $mod+shift+o exec prompt "Exit i3?" "i3-msg exit"
 #        status_command i3status
 #}
 
+exec --no-startup-id sh -c "~/.fehbg"
 exec --no-startup-id xrandr --output DP-4 --mode 2560x1440 --rate 479.99
 exec --no-startup-id xset s 300 300
 exec --no-startup-id picom
