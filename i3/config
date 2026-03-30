@@ -56,10 +56,10 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run \
-  -nb '#2d353b' \
-  -nf '#d3c6aa' \
-  -sb '#7fbbb3' \
-  -sf '#2d353b' \
+  -nb '#1C1917' \
+  -nf '#B4BDC3' \
+  -sb '#6099C0' \
+  -sf '#1C1917' \
   -fn 'MonoLisa i3b4cx:style=Bold Italic:size=9' \
   -l 20 -c \
   -bw 1 \
