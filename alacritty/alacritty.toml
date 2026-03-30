@@ -1,6 +1,6 @@
 [general]
 # Switch variants by changing the file name below
-import = ["~/.config/alacritty/themes/everforest-dark-medium.toml"]
+import = ["~/.config/alacritty/themes/zenbones-dark.toml"]
 
 [font]
 normal = { family = "MonoLisa i3b4cx", style = "Bold Italic" }
