@@ -1,0 +1,20 @@
+/* Fix transparent popover borders - fully opaque */
+popover {
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+popover > contents {
+  background: #303030;
+  box-shadow: none;
+  border: 1px solid #505050;
+  border-radius: 8px;
+  margin: 0;
+}
+
+popover > arrow {
+  background: #303030;
+  border: none;
+  box-shadow: none;
+}
