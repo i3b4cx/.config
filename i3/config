@@ -28,7 +28,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l blur
+exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l blur --off 60
 
 # lock session
 bindsym $mod+x exec loginctl lock-session
@@ -220,7 +220,6 @@ for_window [class="^steam_app_" title="^$"] kill
 #}
 
 exec --no-startup-id sh -c "~/.fehbg"
-exec --no-startup-id xrandr --output DP-4 --mode 2560x1440 --rate 479.99
-exec --no-startup-id xset s 300 300
+exec --no-startup-id xset s 60 60
 exec --no-startup-id picom
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
